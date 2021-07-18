@@ -1,0 +1,165 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    box-shadow: none;
+    text-decoration: none;
+}
+body{
+    background-color: #292d33;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+.container {
+    position: relative;
+    margin-top: 100px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 700px;
+    background-color: #191919;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.container-onglets{
+    background: #191919;
+    justify-content: center;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 1em;
+    height: 10%;
+    display: flex;
+}
+.onglets {
+    width: 220px;
+    display: flex;
+    color: #656665;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.contenu {
+    height: 70%;
+    width: 100%;
+    position: absolute;
+    color: #fff;
+    opacity: 0;
+}
+.contenu h3 {
+    padding: 20px;
+    color: #fff;
+}
+.contenu p {
+    padding: 20px;
+    color: #fff;
+}
+hr{
+    margin: 1em 0 3em 0;
+}
+/* Anim */
+
+.active {
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+.activeContenu {
+    z-index: 10;
+    animation: fade 0.5s forwards;
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.sectionsInfos{
+    margin-top: 20px;
+}
+.sectionOublier p{
+    font-size: 13px;
+}
+.sectionOublier a{
+    color: #ff4754;
+}
+.sectionOublier p a{
+    color: #ff4754;
+}
+label{
+    position: relative;
+}
+label input{
+    font-size: 1em;
+    background: transparent;
+    color: #f9f9f9;
+    border: 2px solid #7a7a7a;
+    border-radius: 5px;
+    padding: 1rem 1.2rem;
+    width: 350px;
+    transition: all 0.2s;
+}
+label input:focus{
+    border-color: #ff4754;
+}
+label .password-icon{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    color: #f9f9f9;
+    transition: all 0.2s;
+    right: 20px;
+}
+label .password-icon .feather-eye{
+    display: none;
+}
+
+label .password-icon:hover{
+    cursor: pointer;
+    color: #ff4754;
+}
+input[type="submit"]:focus{
+    background-color: #101010;
+}
+input[type="submit"]:hover{
+    cursor: pointer;
+}
+input[type="checkbox"] {
+    transform: translateY(16%);
+}
+.sectionCheckbox{
+    margin: 30px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.sectionCheckbox a{
+    margin-top: 30px;
+}
+.sectionOublier{
+    padding: 20px;
+}
+.sectionPolitique{
+    margin-top: 4em;
+}
+.sectionPolitiqueCo p a,.sectionPolitiqueRe p a{
+    color: #ff4754;
+}
+.sectionPolitiqueCo p,.sectionPolitiqueRe p{
+    font-size:  12px;
+}
+.sectionPolitiqueRe{
+    transform: translateY(-25px);
+}
+.sectionPolitiqueCo{
+    transform: translateY(25px);
+}
